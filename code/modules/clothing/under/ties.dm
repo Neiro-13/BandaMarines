@@ -825,7 +825,7 @@
 	icon_state = "s_poncho"
 	item_state = "s_poncho"
 
-/obj/item/clothing/accessory/clf_cape
+/obj/item/clothing/accessory/cape/clf_cape //SS220 EDIT
 	name = "torn CLF flag"
 	desc = "A torn up CLF flag with a pin that allows it to be worn as a cape."
 	icon_state = "clf_cape"
@@ -835,8 +835,8 @@
 		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/ponchos.dmi',
 		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/accessory/ponchos.dmi'
 	)
-	worn_accessory_slot = ACCESSORY_SLOT_PONCHO
 
+// worn_accessory_slot = ACCESSORY_SLOT_PONCHO - SS220 EDIT
 
 //Ties that can store stuff
 
@@ -1238,7 +1238,6 @@
 	max_storage_space = 5
 	can_hold = list(
 		/obj/item/tool/kitchen/utensil/knife,
-		/obj/item/tool/kitchen/utensil/pknife,
 		/obj/item/tool/kitchen/knife,
 		/obj/item/attachable/bayonet,
 		/obj/item/weapon/throwing_knife,
@@ -1295,7 +1294,7 @@
 
 /obj/item/clothing/accessory/storage/holster
 	name = "shoulder holster"
-	desc = "A handgun holster with an attached pouch, allowing two magazines or speedloaders to be stored along with it."
+	desc = "Кобура для пистолета с прикрепленным подсумком, позволяющим хранить вместе два магазина или сменных барабана." //SS220 EDIT
 	icon_state = "holster"
 	worn_accessory_slot = ACCESSORY_SLOT_STORAGE
 	high_visibility = TRUE
@@ -1530,7 +1529,7 @@ Wrist Accessories
 	item_icons = list(
 		WEAR_AS_GARB = 'icons/mob/humans/onmob/clothing/helmet_garb/misc.dmi',
 	)
-	flags_obj = OBJ_IS_STYLISH
+	flags_obj = OBJ_IS_STYLISH|OBJ_IS_HELMET_GARB
 	worn_accessory_slot = ACCESSORY_SLOT_DECOR
 	worn_accessory_limit = 2
 	style_postfix = list("neck", "left_wrist", "right_wrist")
@@ -1577,6 +1576,10 @@ Wrist Accessories
 	name = "urban raincover"
 	icon_state = "raincover_urban"
 
+/obj/item/clothing/accessory/helmet/cover/raincover/snow
+	name = "snow raincover"
+	icon_state = "raincover_snow"
+
 /obj/item/clothing/accessory/helmet/cover/netting
 	name = "combat netting"
 	desc = "Probably combat netting for a helmet. Probably just an extra hairnet that got ordered for the phantom Almayer cooking staff. Probably useless."
@@ -1593,3 +1596,7 @@ Wrist Accessories
 /obj/item/clothing/accessory/helmet/cover/netting/urban
 	name = "urban combat netting"
 	icon_state = "netting_urban"
+
+/obj/item/clothing/accessory/helmet/cover/netting/snow
+	name = "snow combat netting"
+	icon_state = "netting_snow"
